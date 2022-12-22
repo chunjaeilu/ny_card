@@ -1,0 +1,260 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 폰트 */
+@font-face {
+  font-family: "Js Arirang", "Amarillo"; /* 등록할 폰트 이름 */
+  src: url(fonts/JSArirang.ttf), url(fonts/Amarillo.ttf); /* 폰트 경로 */
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+}
+
+/* page1 */
+.page1 .container {
+  background-image: url(../images/main-bg.png),
+    linear-gradient(90deg, #3f3f3f 20%, #1d1b1c);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page1 h1 {
+  font-family: "Amarillo";
+  font-size: 40px;
+  margin-top: 80px;
+  text-align: center;
+  background-image: linear-gradient(97deg, #f7efbd 30%, #cfae6b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  line-height: 2.7em;
+}
+
+/* page2 */
+.page2 .container {
+  background: linear-gradient(90deg, #3f3f3f 20%, #1d1b1c);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #dfd2b1;
+}
+
+.page2 h2 {
+  font-family: "Js Arirang", cursive;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.page2 .slider {
+  width: 100%;
+  max-width: 400px;
+  height: 220px;
+  background: #ccc;
+  margin: 0 auto;
+}
+
+.page2 p {
+  line-height: 1.8em;
+}
+
+.page2 p .ft-bold {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* page3 */
+.page3 .container {
+  background: linear-gradient(rgba(45, 45, 21, 0.2), rgba(255, 255, 255, 0));
+}
+
+.page3 h2 {
+  font-family: "Js Arirang", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page3 .greeting-form {
+  margin-bottom: 20px;
+}
+
+.page3 #greeting {
+  width: 100%;
+  border: 0.5px solid #666;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.page3 #greeting::placeholder {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.page3 .greeting-form label {
+  display: none;
+}
+
+.page3 .greeting-form .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page3 .greeting-form input {
+  width: 40%;
+  border: 0.5px solid #666;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.page3 .greeting-form input::placeholder {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.page3 .greeting-form button {
+  padding: 5px 12px;
+  font-size: 14px;
+  background: #333;
+  border: 0.5px solid #666;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.page3 .messages {
+  list-style-type: none;
+}
+
+.page3 .messages li {
+  border: 0.1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px #ccc;
+  background: #fcfcfc;
+}
+
+.page3 .messages li .message-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page3 .messages li .message-title h4 {
+  font-size: 14px;
+}
+
+.page3 .messages li .message-title .btn-box {
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.page3 .messages li .message-title .btn-box .btn {
+  border: 0.1px solid #aaa;
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  background: #aaa;
+}
+
+.page3 .messages li .date {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.page3 .messages li .greeting {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* 수정&삭제 버튼 팝업 */
+.page3 .popup-delete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
+  background: #fff;
+  padding: 20px 10px;
+  border: 0.1px solid #ccc;
+  border-radius: 5px;
+}
+
+.page3 .popup-delete h5 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.page3 .popup-delete form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page3 .popup-delete input {
+  border: 0.1px solid #666;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.page3 .popup-delete input::placeholder {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.page3 .popup-delete form button {
+  padding: 5px 12px;
+  font-size: 14px;
+  background: #333;
+  border: 0.5px solid #666;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.page3 .popup-delete form .btn-close {
+  padding: 5px 12px;
+  font-size: 14px;
+  background: #333;
+  border: 0.5px solid #666;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.page3 .popup {
+  display: none;
+}
+.page3 .popup.show {
+  display: block;
+}
+
+.page3 .messages li.choosed {
+  background: #ccc;
+}

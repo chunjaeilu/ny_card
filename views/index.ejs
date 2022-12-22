@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연하장</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script/snowfall.jquery.js"></script>
+    <script src="script/app.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="page1">
+        <div class="container">
+          <h1>
+            <i>
+              Happy <br />
+              New Year
+            </i>
+          </h1>
+        </div>
+      </section>
+      <!-- // .page1 -->
+      <section class="page2">
+        <div class="container">
+          <h2>새해 복 많이 받으세요</h2>
+          <div class="slider"></div>
+          <p>
+            지난 한 해 동안 보내주신 <br />믿음과 응원에 감사의 마음을 전합니다.
+            <br />
+            새해에도 소망하는 일 모두 이루시고 <br />
+            건강과 행운이 함께하길 기원합니다.
+            <br />
+            <br />
+            <span class="ft-bold">김민수 드림</span>
+          </p>
+        </div>
+      </section>
+      <!-- // .page2 -->
+      <section class="page3">
+        <div class="container">
+          <h2>덕담 한 마디</h2>
+          <form action="/create" method="post" class="greeting-form">
+            <textarea
+              name="greeting"
+              id="greeting"
+              cols="30"
+              rows="4"
+              maxlength="255"
+              placeholder="전하고 싶은 말씀을 적어주세요 (최대 255자)"
+              required
+            ></textarea>
+            <div class="info">
+              <label for="name">이름</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="작성자명"
+                required
+              />
+              <label for="pwd">비밀번호</label>
+              <input
+                type="number"
+                id="pwd"
+                name="pwd"
+                placeholder="비밀번호(숫자)"
+                required
+              />
+              <button type="submit">등록</button>
+            </div>
+          </form>
+
+          <ul class="messages">
+            <% for( let i = posts.length - 1; i >= 0; i-- ) { %>
+            <li>
+              <div class="message-title">
+                <h4><%= posts[i].name %></h4>
+                <div class="btn-box">
+                  <div class="btn btn-edit">수정</div>
+
+                  <div class="btn btn-delete">삭제</div>
+                </div>
+              </div>
+              <p class="date"><%= posts[i].date %></p>
+              <p class="greeting"><%= posts[i].greeting %></p>
+              <div class="popup popup-edit">
+                <form action="/edit/<%= i %> " method="post"></form>
+              </div>
+              <div class="popup popup-delete">
+                <h5>글을 삭제하시겠습니까?</h5>
+                <form action="/delete/<%= i %> " method="post">
+                  <input
+                    type="number"
+                    id="pwd_check"
+                    name="pwd_check"
+                    placeholder="비밀번호를 입력하세요"
+                    required
+                  />
+                  <div class="btn-close">취소</div>
+                  <button type="submit">삭제</button>
+                </form>
+              </div>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </section>
+      <!-- // .page3 -->
+    </div>
+  </body>
+</html>
