@@ -39,5 +39,12 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
   - 글 수정시 비밀번호 체크 기능, 최초 등록시 입력한 비밀번호와 일치하면 글이 수정됨
 
 ---
+#### 화면구현 예시
+
+![page1](https://user-images.githubusercontent.com/112890661/209303332-6fe77389-4f28-49f0-b8f0-0da09f7eeeb8.png)
+![page2](https://user-images.githubusercontent.com/112890661/209303339-358092aa-5bca-4a3e-93d3-0647c0b98afc.png)
+![page3](https://user-images.githubusercontent.com/112890661/209303341-81b5f0fc-2d5b-49c8-80d7-e8e0bf28eb5f.png)
+
+---
 #### 향후 업데이트 방향
 - 글 입력, 수정, 삭제시 page1로 돌아감 >> page3만 수정되도록(페이지 분리)
