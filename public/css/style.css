@@ -171,7 +171,7 @@ body {
 .page3 .messages li .message-title .btn-box {
   font-size: 14px;
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 
 .page3 .messages li .message-title .btn-box .btn {
@@ -195,42 +195,47 @@ body {
 }
 
 /* 수정&삭제 버튼 팝업 */
-.page3 .popup-delete {
+.page3 .popup {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 40px);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
   padding: 20px 10px;
   border: 0.1px solid #ccc;
   border-radius: 5px;
 }
 
-.page3 .popup-delete h5 {
+.page3 .popup h5 {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-.page3 .popup-delete form {
+.page3 .popup form {
   display: flex;
   justify-content: space-between;
 }
 
-.page3 .popup-delete input {
+.page3 .popup form .btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.page3 .popup input {
   border: 0.1px solid #666;
   border-radius: 3px;
   padding: 5px;
   font-size: 14px;
 }
 
-.page3 .popup-delete input::placeholder {
+.page3 .popup input::placeholder {
   color: #aaa;
   font-size: 12px;
 }
 
-.page3 .popup-delete form button {
+.page3 .popup form button {
   padding: 5px 12px;
   font-size: 14px;
   background: #333;
@@ -239,7 +244,7 @@ body {
   color: #fff;
 }
 
-.page3 .popup-delete form .btn-close {
+.page3 .popup form .btn-close {
   padding: 5px 12px;
   font-size: 14px;
   background: #333;
@@ -256,5 +261,5 @@ body {
 }
 
 .page3 .messages li.choosed {
-  background: #ccc;
+  background: #eee;
 }

@@ -17,9 +17,16 @@ $(function () {
     $(this).parents("li").addClass("choosed");
   });
 
+  /* 수정버튼 클릭 효과 */
+  $(".page3 .messages li .btn-edit").on("click", function () {
+    $(".page3 .popup-edit").addClass("show");
+    $(".page3 .messages li").removeClass("choosed");
+    $(this).parents("li").addClass("choosed");
+  });
+
   /* 취소버튼 클릭 효과 */
-  $(".page3 .popup-delete .btn-close").on("click", function () {
-    $(".page3 .popup-delete").removeClass("show");
+  $(".page3 .popup .btn-close").on("click", function () {
+    $(".page3 .popup").removeClass("show");
     $(".page3 .messages li").removeClass("choosed");
   });
 });

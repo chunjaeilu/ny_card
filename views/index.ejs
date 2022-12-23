@@ -67,10 +67,12 @@
               />
               <label for="pwd">비밀번호</label>
               <input
-                type="number"
+                type="password"
                 id="pwd"
                 name="pwd"
-                placeholder="비밀번호(숫자)"
+                placeholder="비밀번호(숫자 4자리)"
+                pattern="[0-9]{4,4}"
+                maxlength="4"
                 required
               />
               <button type="submit">등록</button>
@@ -91,20 +93,39 @@
               <p class="date"><%= posts[i].date %></p>
               <p class="greeting"><%= posts[i].greeting %></p>
               <div class="popup popup-edit">
-                <form action="/edit/<%= i %> " method="post"></form>
+                <h5>글을 수정하시겠습니까?</h5>
+                <form action="/edit/<%= i %> " method="post">
+                  <input
+                    type="password"
+                    id="pwd_check"
+                    name="pwd_check"
+                    placeholder="비밀번호를 입력하세요"
+                    pattern="[0-9]{4,4}"
+                    maxlength="4"
+                    required
+                  />
+                  <div class="btn-group">
+                    <div class="btn-close">취소</div>
+                    <button type="submit">수정</button>
+                  </div>
+                </form>
               </div>
               <div class="popup popup-delete">
                 <h5>글을 삭제하시겠습니까?</h5>
                 <form action="/delete/<%= i %> " method="post">
                   <input
-                    type="number"
+                    type="password"
                     id="pwd_check"
                     name="pwd_check"
                     placeholder="비밀번호를 입력하세요"
+                    pattern="[0-9]{4,4}"
+                    maxlength="4"
                     required
                   />
-                  <div class="btn-close">취소</div>
-                  <button type="submit">삭제</button>
+                  <div class="btn-group">
+                    <div class="btn-close">취소</div>
+                    <button type="submit">삭제</button>
+                  </div>
                 </form>
               </div>
             </li>
