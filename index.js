@@ -54,14 +54,46 @@ app.post("/create", function (req, res) {
 app.post("/delete/:id", (req, res) => {
   const id = req.params.id;
   const pwdCheck = req.body.pwd_check;
+  console.log(id);
   console.log(pwdCheck);
+  console.log(posts[id].pwd);
   if (pwdCheck == posts[id].pwd) {
     posts.splice(id, 1);
     // 배열의 인덱스번호(id)부터 1개 삭제 >> 선택한 인덱스만 삭제된다.
 
     // posts 배열 업데이트 (삭제 목록 반영)
     fs.writeFileSync("data.json", JSON.stringify(posts));
+    // 화면 새로고침
+    res.redirect("/");
+  } else {
+    res.redirect("/");
+  }
+});
 
+// 글 수정 요청 처리
+app.post("/edit/:id", (req, res) => {
+  const id = req.params.id;
+  const pwdCheck = req.body.pwd_check;
+
+  if (pwdCheck == posts[id].pwd) {
+    const greetingEd = req.body.greeting_edit;
+    const nameEd = req.body.name_edit;
+    const pwdCh = req.body.pwd_check;
+
+    const dateEd = new Date();
+    const dFormat = dateFns.format(dateEd, "yy.MM.dd");
+
+    const postEd = {
+      greeting: greetingEd,
+      name: nameEd,
+      pwd: pwdCh,
+      date: dFormat,
+    };
+
+    posts.splice(id, 1, postEd);
+
+    // posts 배열 업데이트 (삭제 목록 반영)
+    fs.writeFileSync("data.json", JSON.stringify(posts));
     // 화면 새로고침
     res.redirect("/");
   } else {

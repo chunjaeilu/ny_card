@@ -6,13 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>연하장</title>
 
+    <!-- 검색엔진 최적화 -->
+    <meta name="og:type" content="website" />
+    <meta name="description" content="2023 모바일연하장" />
+    <meta
+      name="keywords"
+      content="모바일연하장, 연하장, 크리스마스, 새해인사, 새해, 덕담"
+    />
+    <meta name="author" content="김민수" />
+    <meta name="og:site_name" content="모바일연하장" />
+
+    <!-- sns 링크 최적화 -->
+    <meta property="og:title" content="모바일연하장" />
+    <meta property="og:description" content="2023 모바일연하장" />
+    <meta
+      property="og:url"
+      content="https://chunjaeilu.github.io/kolon_global/"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/chunjaeilu/kolon_global/blob/main/thumbnail-img.png?raw=true"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./src/images/favicon.png" />
+
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/scroll-ani.css" />
 
-    <!-- jQuery -->
+    <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
     <script src="script/snowfall.jquery.js"></script>
     <script src="script/app.js"></script>
+    <script src="script/scroll.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -24,13 +51,37 @@
               New Year
             </i>
           </h1>
+          <img class="main-bg" src="images/main-bg.png" alt="bg-img" />
         </div>
       </section>
       <!-- // .page1 -->
       <section class="page2">
         <div class="container">
           <h2>새해 복 많이 받으세요</h2>
-          <div class="slider"></div>
+          <div class="sliders">
+            <div class="slider-wrap">
+              <div class="slider">
+                <img src="images/slider-img1.jpg" alt="slider-img1" />
+              </div>
+              <div class="slider">
+                <img src="images/slider-img2.jpg" alt="slider-img2" />
+              </div>
+              <div class="slider">
+                <img src="images/slider-img3.jpg" alt="slider-img3" />
+              </div>
+            </div>
+            <div class="slider-btn btn-prev">
+              <img src="images/icon-prev.svg" alt="이전" />
+            </div>
+            <div class="slider-btn btn-next">
+              <img src="images/icon-next.svg" alt="다음" />
+            </div>
+          </div>
+          <div class="slider-pagination">
+            <div class="btn-img btn-img1 show"></div>
+            <div class="btn-img btn-img2"></div>
+            <div class="btn-img btn-img3"></div>
+          </div>
           <p>
             지난 한 해 동안 보내주신 <br />믿음과 응원에 감사의 마음을 전합니다.
             <br />
@@ -95,18 +146,42 @@
               <div class="popup popup-edit">
                 <h5>글을 수정하시겠습니까?</h5>
                 <form action="/edit/<%= i %> " method="post">
-                  <input
-                    type="password"
-                    id="pwd_check"
-                    name="pwd_check"
-                    placeholder="비밀번호를 입력하세요"
-                    pattern="[0-9]{4,4}"
-                    maxlength="4"
+                  <textarea
+                    name="greeting_edit"
+                    id="greeting_edit"
+                    cols="30"
+                    rows="3"
+                    maxlength="255"
+                    placeholder="전하고 싶은 말씀을 적어주세요 (최대 255자)"
                     required
-                  />
-                  <div class="btn-group">
-                    <div class="btn-close">취소</div>
-                    <button type="submit">수정</button>
+                  >
+<%= posts[i].greeting %>
+                  </textarea>
+                  <div class="info">
+                    <div class="input-box">
+                      <label for="name_edit">이름</label>
+                      <input
+                        type="text"
+                        id="name_edit"
+                        name="name_edit"
+                        placeholder="작성자명"
+                        required
+                        value="<%= posts[i].name %>"
+                      />
+                      <input
+                        type="password"
+                        id="pwd_check"
+                        name="pwd_check"
+                        placeholder="비밀번호"
+                        pattern="[0-9]{4,4}"
+                        maxlength="4"
+                        required
+                      />
+                    </div>
+                    <div class="btn-group">
+                      <div class="btn-close">취소</div>
+                      <button type="submit">수정</button>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -131,6 +206,10 @@
             </li>
             <% } %>
           </ul>
+        </div>
+        <div class="view-more">
+          <p>더보기</p>
+          <img src="/images/view-more.svg" alt="더보기" />
         </div>
       </section>
       <!-- // .page3 -->

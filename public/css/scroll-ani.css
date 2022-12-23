@@ -1,0 +1,106 @@
+/* animation.css */
+.page1 h1 {
+  animation: opacity 2s ease-in forwards;
+}
+
+.page1 .main-bg {
+  animation: slide-up 2s ease forwards;
+}
+
+.page2 h2 {
+  opacity: 0;
+}
+
+.page2 .sliders {
+  opacity: 0;
+}
+
+.page2 p {
+  opacity: 0;
+}
+
+.page3 h2 {
+  opacity: 0;
+}
+
+.page3 .greeting-form textarea {
+  opacity: 0;
+}
+
+.page3 .greeting-form .info {
+  opacity: 0;
+}
+
+.page3 .messages {
+  opacity: 0;
+}
+
+.page3 .view-more {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.page3 .view-more.show {
+  max-height: 50px;
+  opacity: 1;
+}
+
+/* animation */
+.slide-up {
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+.slide-left {
+  animation: slide-left 1s ease-in-out forwards;
+}
+
+.slide-right {
+  animation: slide-right 1s ease-in-out forwards;
+}
+
+.opacity {
+  animation: opacity 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
