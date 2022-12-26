@@ -11,6 +11,7 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
 - 제공된 와이어프레임 참고하여 개별적으로 디자인
 - 화면규격 : 모바일 디바이스 환경에 반응
 - 글쓰기 기능 DB file 생성하여 구현 및 관리
+- 제출기한 : 2
 
 #### Time Table
 
