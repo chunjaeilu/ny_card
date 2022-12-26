@@ -7,7 +7,7 @@ $(function () {
     round: true,
     minSize: 1,
     maxSize: 5,
-    flakeCount: 80,
+    flakeCount: 120,
   });
 
   /* 이미지 슬라이더 */
@@ -88,15 +88,5 @@ $(function () {
   $(".page3 .messages li").on("click", function () {
     $(".page3 .messages li").not(this).removeClass("view-all");
     $(this).toggleClass("view-all");
-  });
-  /* 더보기 클릭시 목록 추가 노출 */
-  let view_num = 0;
-  let liEl = document.querySelectorAll(".page3 .messages li");
-  $(".page3 .view-more").on("click", function () {
-    view_num++;
-    if (liEl.length / 4 < view_num) {
-      return;
-    }
-    $(".page3 .messages").css({ height: `calc(92px * 4 * ${view_num + 1})` });
   });
 });

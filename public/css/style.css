@@ -5,12 +5,10 @@
   box-sizing: border-box;
 }
 
-/* 폰트 */
-@font-face {
-  font-family: "Js Arirang", "Amarillo"; /* 등록할 폰트 이름 */
-  src: url(fonts/JSArirang.ttf), url(fonts/Amarillo.ttf); /* 폰트 경로 */
+:root {
+  --main-font: "Great Vibes", cursive;
+  --title-font: "Nanum Brush Script", cursive;
 }
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -30,11 +28,13 @@ body {
 /* page1 */
 .page1 .container {
   background: linear-gradient(90deg, #3f3f3f 20%, #1d1b1c);
+  overflow: hidden;
 }
 
 .page1 h1 {
-  font-family: "Amarillo";
-  font-size: 40px;
+  font-family: var(--main-font);
+  font-size: 70px;
+  font-weight: 700;
   margin-top: 80px;
   text-align: center;
   background-image: linear-gradient(97deg, #f7efbd 30%, #cfae6b);
@@ -42,7 +42,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  line-height: 2.7em;
+  /* line-height: 2.7em; */
 }
 
 .page1 .main-bg {
@@ -66,9 +66,9 @@ body {
 }
 
 .page2 h2 {
-  font-family: "Js Arirang", cursive;
+  font-family: var(--title-font);
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .page2 .sliders {
@@ -164,9 +164,9 @@ body {
 }
 
 .page3 h2 {
-  font-family: "Js Arirang", cursive;
+  font-family: var(--title-font);
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -222,8 +222,8 @@ body {
 
 .page3 .messages {
   list-style-type: none;
-  height: calc(92px * 4);
-  overflow: hidden;
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
 }
 
 .page3 .messages li {
@@ -372,14 +372,4 @@ body {
 
 .page3 .messages li.choosed {
   background: #eee;
-}
-
-.page3 .view-more {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 100;
-  font-size: 10px;
 }
