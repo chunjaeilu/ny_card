@@ -48,6 +48,6 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
 
 ---
 #### 향후 업데이트 방향
-- 글 입력, 수정, 삭제시 page1로 돌아감 >> page3만 수정되도록(페이지 분리)
+- 글 입력, 수정, 삭제시 page1로 돌아감 >> page3만 수정되도록(페이지 분리? fetch? 추가학습 필요)
 - 모바일 접속시 폰트 적용 안 되는 문제
 - next/prev 버튼으로 슬라이드시 하단 버튼 스타일 
