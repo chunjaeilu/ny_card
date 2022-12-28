@@ -62,6 +62,7 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
   - page3 글 삭제/수정 비밀번호 틀렸을 때 경고창 띄움
     - 경고문구 한글로 입력시 글자 깨짐 현상
   - page3 버튼 호버시 마우스포인터 변경
+  - page3 반복문 추가요소 id 유일값으로 수정 (index값 참조)
      
 ---
 #### 향후 업데이트 방향
