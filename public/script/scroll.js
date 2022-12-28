@@ -1,6 +1,6 @@
 $(function () {
   $(window).on("scroll", function () {
-    console.log(scrollY);
+    // console.log(scrollY);
 
     if (scrollY >= 130) {
       $(".page2 h2").addClass("slide-up");

@@ -173,7 +173,7 @@
                 <form action="/edit/<%= i %> " method="post">
                   <textarea
                     name="greeting_edit"
-                    id="greeting_edit"
+                    id="greeting_edit_<%= i %>"
                     cols="30"
                     rows="3"
                     maxlength="255"
@@ -187,7 +187,7 @@
                       <label for="name_edit">이름</label>
                       <input
                         type="text"
-                        id="name_edit"
+                        id="name_edit_<%= i %>"
                         name="name_edit"
                         placeholder="작성자명"
                         required
@@ -195,7 +195,7 @@
                       />
                       <input
                         type="password"
-                        id="pwd_check"
+                        id="edit_pwd_check_<%= i %>"
                         name="pwd_check"
                         placeholder="비밀번호"
                         pattern="[0-9]{4,4}"
@@ -215,7 +215,7 @@
                 <form action="/delete/<%= i %> " method="post">
                   <input
                     type="password"
-                    id="pwd_check"
+                    id="del_pwd_check_<%= i %>"
                     name="pwd_check"
                     placeholder="비밀번호를 입력하세요"
                     pattern="[0-9]{4,4}"
