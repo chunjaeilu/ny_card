@@ -12,20 +12,24 @@ $(function () {
 
   /* 이미지 슬라이더 */
   let imgNum = 0;
-  let imgWidth = 335;
-
   $(".page2 .sliders .btn-prev").on("click", function () {
     if (imgNum <= 0) {
       return;
     }
     imgNum--;
-    transX = -imgNum * imgWidth;
-    console.log(imgNum);
-    console.log(transX);
-    $(".page2 .sliders .slider-wrap").css(
-      "transform",
-      `translateX(${transX}vw)`
-    );
+    $(".page2 .slider-pagination .btn-img").removeClass("show");
+    $(".page2 .slider-pagination .btn-img").eq(imgNum).addClass("show");
+
+    if (imgNum == 1) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans670");
+      $(".page2 .sliders .slider-wrap").addClass("trans335");
+    } else if (imgNum == 2) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans335");
+      $(".page2 .sliders .slider-wrap").addClass("trans670");
+    } else if (imgNum == 0) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans335");
+      $(".page2 .sliders .slider-wrap").removeClass("trans670");
+    }
   });
 
   $(".page2 .sliders .btn-next").on("click", function () {
@@ -33,26 +37,36 @@ $(function () {
       return;
     }
     imgNum++;
+    $(".page2 .slider-pagination .btn-img").removeClass("show");
+    $(".page2 .slider-pagination .btn-img").eq(imgNum).addClass("show");
 
-    transX = -imgNum * imgWidth;
-    console.log(imgNum);
-    console.log(transX);
-    $(".page2 .sliders .slider-wrap").css(
-      "transform",
-      `translateX(${transX}px)`
-    );
+    if (imgNum == 1) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans670");
+      $(".page2 .sliders .slider-wrap").addClass("trans335");
+    } else if (imgNum == 2) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans335");
+      $(".page2 .sliders .slider-wrap").addClass("trans670");
+    } else if (imgNum == 0) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans335");
+      $(".page2 .sliders .slider-wrap").removeClass("trans670");
+    }
   });
 
   $(".page2 .slider-pagination .btn-img").on("click", function () {
     imgNum = $(this).index();
-
-    transX = -imgNum * imgWidth;
     $(".page2 .slider-pagination .btn-img").removeClass("show");
     $(this).addClass("show");
-    $(".page2 .sliders .slider-wrap").css(
-      "transform",
-      `translateX(${transX}px)`
-    );
+
+    if (imgNum == 1) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans670");
+      $(".page2 .sliders .slider-wrap").addClass("trans335");
+    } else if (imgNum == 2) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans335");
+      $(".page2 .sliders .slider-wrap").addClass("trans670");
+    } else if (imgNum == 0) {
+      $(".page2 .sliders .slider-wrap").removeClass("trans335");
+      $(".page2 .sliders .slider-wrap").removeClass("trans670");
+    }
   });
 
   /* 삭제버튼 클릭 효과 */

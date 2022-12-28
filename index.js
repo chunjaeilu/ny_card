@@ -25,6 +25,7 @@ const jsonData = JSON.parse(readFile);
 
 posts = [...jsonData];
 
+var check = "";
 // home 화면 불러오기
 app.get("/", function (req, res) {
   res.render("index.ejs", { posts });
@@ -57,16 +58,19 @@ app.post("/delete/:id", (req, res) => {
   console.log(id);
   console.log(pwdCheck);
   console.log(posts[id].pwd);
+
   if (pwdCheck == posts[id].pwd) {
     posts.splice(id, 1);
     // 배열의 인덱스번호(id)부터 1개 삭제 >> 선택한 인덱스만 삭제된다.
 
     // posts 배열 업데이트 (삭제 목록 반영)
     fs.writeFileSync("data.json", JSON.stringify(posts));
+
     // 화면 새로고침
     res.redirect("/");
   } else {
-    res.redirect("/");
+    res.write("<script>alert('Passwords do not match')</script>");
+    res.write('<script>window.location="/"</script>');
   }
 });
 
@@ -97,7 +101,8 @@ app.post("/edit/:id", (req, res) => {
     // 화면 새로고침
     res.redirect("/");
   } else {
-    res.redirect("/");
+    res.write("<script>alert('Passwords do not match')</script>");
+    res.write('<script>window.location="/"</script>');
   }
 });
 
