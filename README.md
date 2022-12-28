@@ -31,12 +31,6 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
 
 <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page1.png?raw=true" width="300"> <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page2.png?raw=true" width="300"> <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page3.png?raw=true" width="300">
 
-
----
-#### 향후 업데이트 방향
-- [ ] 글 입력, 수정, 삭제시 page1로 돌아감 >> page3만 수정되도록(페이지 분리? fetch? 추가학습 필요)
-- [x] 모바일 접속시 폰트 적용 안 되는 문제
-- [ ] next/prev 버튼으로 슬라이드시 하단 버튼 스타일 
 ---
 
 #### Time Table
@@ -50,8 +44,24 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
   - 기능구현 (글 수정기능, 스크롤 애니메이션 효과, 이미지 슬라이드)
   - 서버 배포
   - 1차 제출
-  
+---
+
+#### Update Note
+
 - 22.12.26(월)  
   - 폰트 수정 (@fontface 방식 >> web폰트로 수정)
   - page1 오버스크롤 제거(최초 로딩시 스크롤 멈춤 문제 해결)
   - page3 글목록 더보기 방식 수정 (더보기 버튼 클릭시 펼침 >> 영역 제한 후 스크롤 방식)
+
+- 22.12.28(수)  
+  - page2 이미지 슬라이드 수정
+    - next/prev 버튼 클릭시 하단 pagination 버튼 활성
+    - img3에서 img2로 슬라이드시 반대방향으로 슬라이드 되는 오류 수정 (inline style 조작 >> 클래스로 좌표값 고정)
+  - page3 글 삭제/수정 비밀번호 틀렸을 때 경고창 띄움
+    - 경고문구 한글로 입력시 글자 깨짐 현상
+  - page3 버튼 호버시 마우스포인터 변경
+     
+---
+#### 향후 업데이트 방향
+- [ ] 글 입력, 수정, 삭제시 page1로 돌아감 >> page3만 수정되도록(페이지 분리? fetch? 추가학습 필요)
+- [ ] 경고창 한글 깨짐현상. (스크립트에 "charset=utf-8" 추가해도 안됨. 추가학습 필요)
