@@ -64,8 +64,10 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
   - page3 버튼 호버시 마우스포인터 변경
   - page3 반복문 추가요소 id 유일값으로 수정 (index값 참조)
      
+- 22.12.29(목)  
+  - page3 form 요소 label for값과 input id값 일치시키기
+  
 ---
 #### 향후 업데이트 방향
 - [ ] 글 입력, 수정, 삭제시 page1로 돌아감 >> page3만 수정되도록(페이지 분리? fetch? 추가학습 필요)
 - [ ] 경고창 한글 깨짐현상. (스크립트에 "charset=utf-8" 추가해도 안됨. 추가학습 필요)
-- [ ] 반복문 추가요소 label for값과 input id값 일치시키기
