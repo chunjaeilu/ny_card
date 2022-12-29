@@ -51,7 +51,7 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
 #### Update Note
 
 - 22.12.26(월)  
-  - 폰트 수정 (@fontface 방식 >> web폰트로 수정)
+  - 폰트 수정 (@fontface 방식 >> web폰트로 수정) (모바일에서 폰트 적용 안 되는 문제 해결)
   - page1 오버스크롤 제거(최초 로딩시 스크롤 멈춤 문제 해결)
   - page3 글목록 더보기 방식 수정 (더보기 버튼 클릭시 펼침 >> 영역 제한 후 스크롤 방식)
 
