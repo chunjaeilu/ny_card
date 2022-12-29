@@ -31,7 +31,7 @@ URL : https://port-0-ny-card-fyyf25lbohiha7.gksl2.cloudtype.app/
 ---
 #### 화면구현 예시
 
-<img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page1.png?raw=true" width="250"> <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page2.png?raw=true" width="250"> <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page3.png?raw=true" width="250">
+<img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page1.png?raw=true" height="500"> <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page2.png?raw=true" height="500"> <img src="https://github.com/chunjaeilu/ny_card/blob/master/public/images/%EC%BA%A1%EC%B3%90%EC%9D%B4%EB%AF%B8%EC%A7%80/page3.png?raw=true" height="500">
 
 ---
 
